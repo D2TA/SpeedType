@@ -20,9 +20,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">    
 <!-- Script -->
     <script src="./script.js"></script>
-    <script src="./scriptarticle.js"></script>
+    <script type="text/javascript">
+          var sCount = 0;
+
+          function startTimer(status) {
+            if (status == undefined) {
+              sCount += 1;
+              document.getElementById('timerCount').innerHTML =  sCount;
+            } 
+            setTimeout(startTimer, 1000);          
+          };
+    </script>
   </head>
-  <body onload = "ScriptOnload()">
+  <body onload = "ScriptOnload();">
     <div class = "main">
       <div class = "parameters">
         <div class = "testspecifications">
@@ -32,6 +42,7 @@
         <div class = "timer">
           <div id = "timerText"> Timer:</div>
           <div id = "timerCount">     </div>
+          <div id = "emptyCell">     </div>
         </div>      
         <div class = "attempt">
           <div id = "attemptText">Attempt:</div>
@@ -49,9 +60,15 @@
           <div id = "ignorePerc">     </div>
         </div>      
       </div>
-      <div class = "test">
-        <div id = "textTest" onclick="TypeTest()"></div>
-        <div id = "result"></div>
+      <div class = "ui-test">
+        <div class = "test">
+          <div id = "textTest"></div>
+          <div id = "result" onclick="TypeTest(); startTimer();"></div>
+        </div>
+        <div class = "status">
+          <div id = "statusIcon">   </div>
+          <div id = "blankCharacter" style="background-color: black">  </div>
+        </div>
       </div>
     </div>
   </body>

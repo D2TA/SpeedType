@@ -23,13 +23,14 @@ button {
   color: white;
 }
 
-#textTest, span {
+#result {
   cursor: pointer;
 }
 
 .main {
+  width: 800px;
   border-radius: 5px;
-  padding: 50px;
+  padding: 25px;
   background-color: rgba(5, 5, 5, 0.5)
 }
 
@@ -38,26 +39,25 @@ button {
   border-bottom: 1px solid white;
 }
 
-.parameters {
+.status, .parameters {
   display: flex;
   flex-direction: column;
 }
 
-.parameters > * {
+status > *, .parameters > * {
   flex: 50%;
 }
 
-.attempt, .ignore, .accuracy, .timer, .testspecifications {
+.ui-test, .attempt, .ignore, .accuracy, .timer, .testspecifications {
   display: flex;
   flex-direction: row;
 }
 
 .attempt > div, .ignore > div, .accuracy > div, .timer > div , .testspecifications > div {
   flex: 50%;
-  padding-right: 100px;
 }
 
-.attempt, .ignore, .accuracy, .timer, .testspecifications {
+.status, #textTest, .attempt, .ignore, .accuracy, .timer, .testspecifications {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -65,4 +65,19 @@ button {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+.test {
+  text-align: left;
+  flex: 90%;
+}
+
+#blankCharacter, #result {
+  height: 50px;
+  background-color: black; 
+  white-space: nowrap;
+}
+
+.status {
+  flex-grow: 0.5;
 }

@@ -41,6 +41,8 @@ function setWords(sentence) {
   document.getElementById('textlength').innerHTML           = 'Words <br>' + sentence.length;
   document.getElementById('textChars').innerHTML            = 'Chars <br>' + sentence.join('').length;
   document.getElementById('textTest').style.backgroundColor = 'transparent';
+  document.getElementById('statusIcon').style.backgroundColor = 'transparent';
+  document.getElementById('statusIcon').innerHTML = '<span class="material-icons-outlined">play_circle_outline</span>';
   }
 }
 
@@ -62,12 +64,12 @@ function TypeTest() {
 
   function logKey(e) {
     if (e.code == 'Enter') {
+      // Check if attempted
       if (document.getElementById('result').innerHTML != document.getElementById('textTest').innerHTML) {
         ignore += 1;
         setInfomation();
       };
       document.getElementById('result').innerHTML = '';
-      console.log('Exit Script');
       console.log('Refreshing Text');
       setWords( generateWords() );
     } else if (LegalKeyPress.indexOf(e.code.replace('Key','')) > -1 ) {
@@ -79,19 +81,24 @@ function TypeTest() {
     } else {
       console.log('Ignore Character Entered');
     }
+    // Status: when typed is correct
     if (document.getElementById('result').innerHTML == document.getElementById('textTest').innerHTML) {
+      document.getElementById('statusIcon').innerHTML = '<span class="material-icons-outlined">thumb_up_alt</span>';
+      document.getElementById('statusIcon').style.backgroundColor = 'green';
       document.getElementById('textTest').style.backgroundColor = 'green';
       accuracy += 1;
       setInfomation();
+      startTimer('pause')
       console.log('Test Finished')
     };
-
   };
+
 }
 
 //////////////////////////////////////////////////// Onload Function ////////////////////////////////////////////////////
 function ScriptOnload() {
   setWords( generateWords() );
+
   setInfomation();
 }
 
