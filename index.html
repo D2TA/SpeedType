@@ -24,10 +24,9 @@
           var sCount = 0;
 
           function startTimer(status) {
-            if (status == undefined) {
-              sCount += 1;
-              document.getElementById('timerCount').innerHTML =  sCount;
-            } 
+            sCount += 1;
+            document.getElementById('timerCount').innerHTML =  sCount;
+            document.getElementById('actionePerc').innerHTML = (TypeLog.length/sCount).toFixed(2) ;
             setTimeout(startTimer, 1000);          
           };
     </script>
@@ -59,6 +58,12 @@
           <div id = "ignoreCount">     </div>
           <div id = "ignorePerc">     </div>
         </div>      
+        <div class = "action">
+          <div id = "actionText">Actions:</div>
+          <div id = "actionCount">     </div>
+          <div id = "actionePerc">     </div>
+        </div>      
+
       </div>
       <div class = "ui-test">
         <div class = "test">

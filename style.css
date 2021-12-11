@@ -48,16 +48,16 @@ status > *, .parameters > * {
   flex: 50%;
 }
 
-.ui-test, .attempt, .ignore, .accuracy, .timer, .testspecifications {
+.action, .ui-test, .attempt, .ignore, .accuracy, .timer, .testspecifications {
   display: flex;
   flex-direction: row;
 }
 
-.attempt > div, .ignore > div, .accuracy > div, .timer > div , .testspecifications > div {
+.action > div, .attempt > div, .ignore > div, .accuracy > div, .timer > div , .testspecifications > div {
   flex: 50%;
 }
 
-.status, #textTest, .attempt, .ignore, .accuracy, .timer, .testspecifications {
+.action, .status, #textTest, .attempt, .ignore, .accuracy, .timer, .testspecifications {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
