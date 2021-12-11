@@ -92,7 +92,11 @@ function TypeTest() {
       setInfomation();
       startTimer('pause')
       console.log('Test Finished')
-    };
+    } else if (document.getElementById('result').innerHTML.length >= document.getElementById('textTest').innerHTML.length) {
+      document.getElementById('statusIcon').innerHTML = '<span class="material-icons-outlined">thumb_down_alt</span>';
+      document.getElementById('statusIcon').style.backgroundColor = 'red';
+      document.getElementById('textTest').style.backgroundColor = 'red';
+    }
   };
 
 }
