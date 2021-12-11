@@ -24,12 +24,35 @@
   </head>
   <body onload = "ScriptOnload()">
     <div class = "main">
-      <div class = "testspecifications">
-        <div id = "textlength"></div>
-        <div id = "textChars"></div>
+      <div class = "parameters">
+        <div class = "testspecifications">
+          <div id = "textlength"></div>
+          <div id = "textChars"></div>
+        </div>
+        <div class = "timer">
+          <div id = "timerText"> Timer:</div>
+          <div id = "timerCount">     </div>
+        </div>      
+        <div class = "attempt">
+          <div id = "attemptText">Attempt:</div>
+          <div id = "attemptCount"></div>
+          <div id = "attemptPerc"></div>
+        </div>
+        <div class = "accuracy">
+          <div id = "accuracyText">Phrases:</div>
+          <div id = "accuracyCount">     </div>
+          <div id = "accuracyPerc">     </div>
+        </div>      
+        <div class = "ignore">
+          <div id = "ignoreText">Skipped:</div>
+          <div id = "ignoreCount">     </div>
+          <div id = "ignorePerc">     </div>
+        </div>      
       </div>
-      <div id = "textTest" onclick="TypeTest()"></div>
-      <div id = "result"></div>
+      <div class = "test">
+        <div id = "textTest" onclick="TypeTest()"></div>
+        <div id = "result"></div>
+      </div>
     </div>
   </body>
 </html>
