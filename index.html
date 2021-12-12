@@ -65,6 +65,15 @@
           <div class="tooltip"> <a><span id ="actionePerc">0</span></a><span class="tooltiptext">Percentage of Key presses per second</span></div> 
         </div>      
         <div class = "testspecifications">
+          <div id = "DifficultyID">
+            Word Length:
+            <input type="number" id="DifficultyLevel" name="points" value=4 min=1 oninput="setDifficulty(); ScriptOnload();">
+          </div>
+          <div id = "NumberWordID">
+            Number Words:
+            <input type="number" id="WordLevel" name="points" value= 2 min=1 oninput="setDifficulty(); ScriptOnload();">
+          </div>
+
           <div id = "textlength"></div>
           <div id = "textChars"></div>
         </div>        
