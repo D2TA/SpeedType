@@ -6,6 +6,7 @@
     <title>replit</title>
 <!-- Cascading Style Sheets -->
     <link href="./style.css" rel="stylesheet" type="text/css" />
+    <link href="./style-tooltip.css" rel="stylesheet" type="text/css" />    
 <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,42 +34,45 @@
   </head>
   <body onload = "ScriptOnload();">
     <div class = "main">
+      <div class = "test" style="display: inline-block">
+        <h3> Speed Dictionary <div class="tooltip" style = "text-align: right;"> <a><span class="material-icons-outlined">info</span></a><span class="tooltiptext">Hover over numbers below for more information</span></div> 
+        </h3>        
+      </div>
       <div class = "parameters">
-        <div class = "testspecifications">
-          <div id = "textlength"></div>
-          <div id = "textChars"></div>
-        </div>
         <div class = "timer">
           <div id = "timerText"> Timer:</div>
-          <div id = "timerCount">     </div>
+          <div class="tooltip"> <a><span id ="timerCount">0</span></a><span class="tooltiptext">Timer is in seconds - fuzzy logic</span></div> 
           <div id = "emptyCell">     </div>
         </div>      
         <div class = "attempt">
           <div id = "attemptText">Attempt:</div>
-          <div id = "attemptCount"></div>
-          <div id = "attemptPerc"></div>
+          <div class="tooltip"> <a><span id ="attemptCount"></span></a><span class="tooltiptext">Number of sentences attempted</span></div> 
+          <div class="tooltip"> <a><span id ="wordCount"></span></a><span class="tooltiptext">Number of words attempted</span></div> 
         </div>
         <div class = "accuracy">
           <div id = "accuracyText">Phrases:</div>
-          <div id = "accuracyCount">     </div>
-          <div id = "accuracyPerc">     </div>
+          <div class="tooltip"> <a><span id ="accuracyCount"></span></a><span class="tooltiptext">Number of sentences correctly entered</span></div> 
+          <div class="tooltip"> <a><span id ="accuracyPerc"></span></a><span class="tooltiptext">Percentage of sentences correctly entered out of all attempts</span></div> 
         </div>      
         <div class = "ignore">
           <div id = "ignoreText">Skipped:</div>
-          <div id = "ignoreCount">     </div>
-          <div id = "ignorePerc">     </div>
+          <div class="tooltip"> <a><span id ="ignoreCount"></span></a><span class="tooltiptext">Number of Sentences incorrectly entered</span></div> 
+          <div class="tooltip"> <a><span id ="ignorePerc"></span></a><span class="tooltiptext">Percentage of Sentences incorrectly entered out of all attempts</span></div> 
         </div>      
         <div class = "action">
           <div id = "actionText">Actions:</div>
-          <div id = "actionCount">     </div>
-          <div id = "actionePerc">     </div>
+          <div class="tooltip"> <a><span id ="actionCount">0</span></a><span class="tooltiptext">Number of Key presses</span></div> 
+          <div class="tooltip"> <a><span id ="actionePerc">0</span></a><span class="tooltiptext">Percentage of Key presses per second</span></div> 
         </div>      
-
+        <div class = "testspecifications">
+          <div id = "textlength"></div>
+          <div id = "textChars"></div>
+        </div>        
       </div>
       <div class = "ui-test">
         <div class = "test">
           <div id = "textTest"></div>
-          <div id = "result" onclick="TypeTest(); startTimer();"></div>
+          <div id = "result" onclick="TypeTest(); startTimer();">Click to start typing then hit 'Enter'</div>
         </div>
         <div class = "status">
           <div id = "statusIcon">   </div>
@@ -78,3 +82,5 @@
     </div>
   </body>
 </html>
+
+

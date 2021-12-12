@@ -16,11 +16,8 @@ body {
   vertical-align: middle;
 }
 
-button {
-  background-color: transparent;
-  border: 0px solid white;  
-  border-bottom: 1px solid white;
-  color: white;
+h3 {
+  margin: 0px;
 }
 
 #result {
@@ -34,10 +31,6 @@ button {
   background-color: rgba(5, 5, 5, 0.5)
 }
 
-.main > div:nth-child(odd) {
-  background-color: grey;
-  border-bottom: 1px solid white;
-}
 
 .status, .parameters {
   display: flex;
@@ -46,6 +39,11 @@ button {
 
 status > *, .parameters > * {
   flex: 50%;
+}
+
+.parameters {
+  border-bottom: 1px solid white;
+  border-top:    1px solid white;
 }
 
 .action, .ui-test, .attempt, .ignore, .accuracy, .timer, .testspecifications {
@@ -65,6 +63,16 @@ status > *, .parameters > * {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+.testspecifications {
+  border-bottom:  1px solid white;
+  border-top:     1px solid white;
+}
+
+.action {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .test {
